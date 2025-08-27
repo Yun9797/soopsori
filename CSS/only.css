@@ -1,0 +1,176 @@
+:root{
+    --main-color:#092729;
+}
+
+.only-you-wrap .title{
+    margin-bottom:0;
+}
+.title-box{
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.only-tap-list{
+    display:flex;
+    gap:10px;
+}
+.only-tap-list li a{
+    display:block;
+    padding:16px 24px;
+    border:1px solid var(--main-color);
+    border-radius:30px;
+    font-size:1.13rem;
+    
+}
+.only-tap-list li a:hover{
+    background-color:#ddd;
+}
+.only-tap-list li.active a{
+    background:var(--main-color);
+    color:#fff;
+    font-weight:600;
+}
+
+.only-slider-list{
+    display:flex;
+    gap:20px;
+    justify-content: space-between;
+}
+.only-slider-list>div{
+    position:relative;
+    /* border:1px solid red; */
+    padding:2% 0;
+    border-radius:40px 40px 0 40px;
+    overflow:hidden;
+    background:#fff;
+
+}
+.only-slider-list>div img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+.only-slider-list>div .hover-img{
+    position:absolute;
+    top:0;
+    left:0;
+    opacity:0;
+    transition:0.3s;
+}
+.only-slider-list>div .text-box{
+    position:absolute;
+    bottom:50px;
+    /* left:50%;
+    transform:translateX(-50%); 
+    ->글자가 긴경우엔 width:100%, text-align:center; */
+    font-size:1.13rem;
+    /* background-color:rgba(0,0,255,0.2); */
+    width:100%;
+    text-align: center;
+    z-index:100;
+}
+.only-slider-list>div:hover .hover-img{
+    opacity: 1;
+}
+.only-slider-list>div .radius{
+    width:75px;
+    height:75px;
+    /* background-color:skyblue; */
+    background:#FFF;
+    border-radius:30px 0 0 0;
+    position:absolute;
+    right:0;
+    bottom:0;
+}
+.radius::before{
+    content:"";
+    display:block;
+    /* background-color:#fff; */
+    background:transparent;
+    width:80px;
+    height:80px;
+    border-radius:50px;
+    position:absolute;
+    left:-80px;
+    bottom:0;
+    box-shadow:40px 40px 0 #fff;
+}
+.radius::after{
+    content:"";
+    display:block;
+    /* background:#fff; */
+    background:transparent;
+    width:80px;
+    height:80px;
+    border-radius:50px;
+    position:absolute;
+    right:0;
+    top:-80px;
+    box-shadow:40px 40px 0 #fff;
+}
+.only-slider-list>div:hover .text-box{
+    color:#fff;
+}
+.only-slider-list>div::after{
+    content: "";
+    display: block;
+    position:absolute;
+    right:10px;
+    bottom:10px;
+    width:60px;
+    height:60px;
+    background:var(--main-color) url(../image/arrow-right-thin.svg) no-repeat center center;
+    z-index:1000;
+    border-radius:50%;
+    transform:rotate(45deg);
+    transition:0.3s;
+}
+
+.only-slider-list>div:hover::after{
+    right:0;
+    bottom:0;
+}
+
+
+.sellection{
+    display:flex;
+    justify-content:space-between;
+}
+.sellection>div img{
+    width:100%; /* ->부모의 크기가 기준 */
+    
+}
+.sel-right{
+    /* 상하좌우 가운데보내는 */
+   display:flex;
+   flex-direction:column; /* 좌우 */
+   justify-content:center; /*위아래 */
+   align-items:center; /* 좌우 */
+   gap:40px;
+   padding-left:95px;
+}
+
+.sel-right .text-box{
+    text-align: center; /*글자 가운데 */
+}
+
+.sel-right .text-box strong{
+    font-size:2rem; /* 기본크기의 2배 */
+
+}
+.sel-right .text-box p{
+    font-size:1.13rem;
+    margin:20px 0;
+}
+
+.sel-right .text-box .more{
+    background:var(--main-color);
+    color:#fff;
+    display:inline-block;
+    padding:11px 20px;
+    border-radius:30px;
+    font-weight:600;
+    
+
+}
